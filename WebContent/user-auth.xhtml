@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="template/common.xhtml">
+
+	<ui:define name="body">
+
+		<style>
+.tt-auth {
+	width: 300px;
+	height: 220px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -110px;
+	padding: 3px;
+}
+
+
+
+</style>
+
+		<script type="text/javascript">
+			function handleLoginRequest(xhr, status, args) {
+				if (args.validationFailed || !args.loggedIn) {
+					jQuery('#pnlLogin').effect("shake", {
+						times : 3
+					}, 100);
+				}
+			}
+		</script>
+
+		<p:growl id="message" showDetail="true" life="10000" />
+
+		<div class="tt-auth" id="pnlLogin">
+
+
+			<p:panel header="Login" >
+
+				<h:form>
+
+					<h:panelGrid columns="2"  cellpadding="5" >
+
+						<h:outputLabel for="username" value="Usuário:" />
+						<p:inputText value="#{loginBean.username}" id="username"
+							required="true" label="username" maxlength="45"
+							requiredMessage="Login é obrigatório." />
+
+						<h:outputLabel for="password" value="Senha:" />
+						<p:password value="#{loginBean.password}" id="password"
+							required="true" label="password"
+							requiredMessage="Senha é obrigatória." />
+
+					<f:facet name="footer" >
+							<p:commandButton id="loginButton" value="Login" update=":message"
+								actionListener="#{loginBean.login}"
+								oncomplete="handleLoginRequest(xhr, status, args)" ajax="false" />
+					</f:facet>
+					</h:panelGrid>
+
+					
+				</h:form>
+
+			</p:panel>
+
+		</div>
+
+	</ui:define>
+</ui:composition>

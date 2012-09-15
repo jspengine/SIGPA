@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:metadata>
+	<f:event listener="#{areatrabalhoBean.load}" type="preRenderView" />
+</f:metadata>
+
+
+<h:head>
+	<h:title>
+
+	</h:title>
+
+	<link href="css/TT.Theme.css" rel="stylesheet" type="text/css" />
+	<link href="css/TT.Theme.Forms.css" rel="stylesheet" type="text/css" />
+
+	<style>
+.p-a {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: 30px;
+	text-align: center;
+}
+
+.p-p {
+	margin-top: -30px;
+	position: relative;
+	width: 100%;
+}
+</style>
+
+	<script type="text/javascript">
+		window.addEventListener("load", function() {
+			var p = document.getElementById("dvFoto");
+			var bt_A = document.getElementById("bt-A");
+
+			p.addEventListener("mouseover", function() {
+				document.getElementById("bt-A").style.display = 'block';
+			}, false);
+
+			p.addEventListener("mouseout", function() {
+				document.getElementById("bt-A").style.display = 'none';
+			}, false);
+		}, false);
+	</script>
+
+</h:head>
+
+<h:body>
+
+	<p:growl id="message" showDetail="true" life="10000" />
+
+
+	<div style="width: 100%">
+
+
+
+		<p:toolbar>
+
+			<p:toolbarGroup align="right" style="heigth: 55px;">
+
+
+				<div>
+					<div class="foto-profile" style="float: left">
+
+						<img src="#{areatrabalhoBean.user.imageUrl}"
+							title="#{areatrabalhoBean.user.nome}"
+							alt="areatrabalhoBean.user.nome" />
+					</div>
+					<div style="float: left; margin: 5px;">
+
+						<h:form enctype="multipart/form-data">
+							<p:commandButton id="mnuBtMenu"
+								value="#{areatrabalhoBean.user.email}"
+								icon="ui-icon-carat-2-n-s" />
+
+							<p:overlayPanel id="mnuConfig" for="mnuBtMenu" hideEffect="fade"
+								style="width:300px;">
+								<div id="dvFoto"
+									style="float: left; margin: 10px; border: 1px solid #000;">
+									<img src="#{areatrabalhoBean.user.imageUrl}"
+										title="#{areatrabalhoBean.user.nome}"
+										alt="areatrabalhoBean.user.nome"
+										style="width: 100px; height: 120px;" />
+
+									<div id="bt-A" class="p-p p-a" style="display: none;">
+
+										<p:commandLink value="Alterar Foto"
+											style="color: #FFF; cursor: pointer;"
+											onclick="dlConfiguracoes.show()" />
+
+									</div>
+
+								</div>
+								<div style="float: left">
+									<p:commandLink value="Configurações" />
+									<br />
+									<p:commandLink value="Sair"
+										actionListener="#{loginBean.logout}" />
+
+								</div>
+
+
+							</p:overlayPanel>
+
+							<p:dialog id="dlConfiguracoes" widgetVar="dlConfiguracoes"
+								header="Atualize a sua Foto" closable="true" modal="true"
+								width="700" height="300">
+
+									<p:fileUpload id="fileUpload"
+										fileUploadListener="#{userBean.atualizarImagem}" mode="advanced"
+										update=":message" sizeLimit="100000"
+										allowTypes="/(\.|\/)(gif|jpg|png)$/"
+										label="Selecione uma foto do Computador" uploadLabel="Atualizar sua Foto" cancelLabel="Cancelar Atualização" />
+
+
+							</p:dialog>
+
+						</h:form>
+
+					</div>
+				</div>
+			</p:toolbarGroup>
+
+
+
+
+
+
+		</p:toolbar>
+
+
+
+
+
+		<div></div>
+
+		<p:layout fullPage="false" style="min-height:600px; width:100%;">
+
+
+			<p:layoutUnit position="west" resizable="true" collapsible="true"
+				size="300" minSize="40" maxSize="500"
+				header="Começe seu trabalho aqui">
+				<h:form>
+					<p:menu model="#{menuBean.model}" style="width: 97%;" />
+				</h:form>
+			</p:layoutUnit>
+
+			<p:layoutUnit position="center" style="width:95%">
+
+				<ui:insert name="body" />
+
+			</p:layoutUnit>
+		</p:layout>
+
+	</div>
+
+
+
+
+</h:body>
+
+</html>

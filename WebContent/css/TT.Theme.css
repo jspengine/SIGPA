@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.PageBody
+{
+    margin: 0;
+    padding: 0;
+}
+
+.ui-widget {
+font-size: 12px !important;
+}
+
+
+.HeaderPage
+{
+    height:60px;
+    border-top: 1px solid #000080; 
+    border-bottom: 1px solid #000080; 
+    background:none;
+	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5270a6', endColorstr='#34446b');
+	background: -webkit-gradient(linear, left top, left bottom, from(#5270a6), to(#34446b));
+	background: -moz-linear-gradient(top,  #5270a6,  #34446b);
+	background-image: -o-linear-gradient(90deg,rgb(82,112,166),rgb(52,68,107));
+
+	width: 100%;
+    /*background-color:#d7eeff;*/
+    /*background: #34446b url(../images/barraTopo.jpg) repeat-x;*/
+}
+
+.HeaderPage .Logotipo
+{
+    margin-left:10px;
+    height:60px;
+    width:160px;
+    background:url(../images/PetraLogo.png) left no-repeat; 
+}
+
+.tt-toolbar
+{
+    height:60px;
+    /*border-top: 1px solid #000080; 
+    border-bottom: 1px solid #000080; */
+    background:none;
+	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E8E8E8, endColorstr=#9C9C9C);
+	background: -webkit-gradient(linear, left top, left bottom, from(#E8E8E8), to(#9C9C9C));
+	background: -moz-linear-gradient(top,  #E8E8E8,  #9C9C9C);
+	background-image: -o-linear-gradient(90deg,rgb(82,112,166),rgb(52,68,107));
+
+	width: 100%;
+	/*-moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;*/
+    /*background-color:#d7eeff;*/
+    /*background: #34446b url(../images/barraTopo.jpg) repeat-x;*/
+}
+
+.tt-toolbar .Logotipo
+{
+    float:left;
+    margin-left:10px;
+    height:60px;
+    width:160px;
+    background:url(../imagens/1.jpg) left no-repeat; 
+}
+
+.foto-profile
+{
+    float:right;
+    width:30px;
+    height:30px;
+    margin:3px; 
+    border: 1px solid #fff;    
+}
+
+.foto-profile img
+{
+    width:30px;
+    height:30px;
+}
+
+.TopBar  
+{
+    height:37px;
+  	background: #f5f5f5;
+}
+.TopBar .Account{
+	float: right;
+	color: #fff;
+	font-weight:bold;
+	background:#34446b;
+	min-width: 100px;
+	height: 24px; 
+	border: 1px solid #000;
+	position: relative;
+	cursor: hand;
+}
+
+.TopBar .Account:hover{
+	color: #fff;
+	background:#5270a6;
+}
+
+
+.TopBar .SettingsAccount{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BEBEBE;
+    box-shadow: 0 1px 5px #5270a6;
+    position: absolute;
+    top: 25px !important;
+    right: 0px;
+}
+
+.TopBar .SettingsAccount span{
+    padding: 5px;
+    color:#34446b;
+    text-align:right;   
+}
+
+.MenuSettings {
+	/*width: 30%;*/
+	text-align:center;
+	margin: 10px; 
+	padding: 0;
+	float: left;
+}
+
+.MenuSettings ul li {
+	margin: 10px; 
+	padding: 0px;
+	/*border-bottom: 1px solid #CCC;*/
+	text-align: right;
+	list-style-type: none;
+}
+
+
+.MenuSettings a:link {
+	/*background: #F5F5F5;*/
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 8px;
+	display: block;
+}
+
+.MenuSettings a:hover {
+	background: #E5F0FF;
+	color: #039;
+}
+
+#Content {
+    margin:0px;
+    padding:0px;
+    width: 100%;
+    height:800px;
+   /* border:1px;
+    border-style:solid;
+    border-color:Black;*/
+    
+}
+
+#Content .PanelLeft{
+    float:left;
+    width: 23%;
+    height:100%;
+    /*border:1px;
+    border-style:solid;
+    border-color:Black;*/
+    font:1em  Verdana, Arial black, Helvetica, sans-serif; 
+}
+
+#Content .MainPanel
+{
+    overflow:auto;
+    float:left;
+    margin-left:5px;
+    padding-left:15px;
+    padding-right:15px;
+    width: 90%;
+    font-size: 11px;
+    /*height:90%;
+    border:1px solid #34446b;*/
+    
+   /* width: 200px;
+	height: 200px;
+	overflow: auto;
+	background: #ccc;
+	float: left;*/
+}
+
+#ComandBar select{
+    float:left;
+    font-size:14px;
+    padding:4px 10px;
+    border:solid 1px #000080;
+    width:350px;
+    height:30px;
+    margin:16px 0 20px 32%;
+}
+
+#ComandBar a
+{
+    float:left;
+    margin:10px 20px 20px 20px;
+    height:42px;
+    width:70px;
+    background:#d7d7d7 url(../images/print.png) left no-repeat;
+    
+}
+    
+#ComandBar a:hover
+{ 
+    height:42px;
+    width:70px;
+    background: #D7D7D7 url(../images/printhover.png) left no-repeat;   
+}
+
+.BodyReport
+{
+
+    width:100%;
+    height:100%;
+    float:left;
+    text-align:center;
+}
+
+.Wait
+{
+    display:none;
+    border: 1px solid #000080; 
+    margin:10px;
+    padding:10px;
+   /* background: #D7D7D7 url(../images/barraTopo.jpg) repeat-x bottom;*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFEFEF', endColorstr='#F5F5F5');
+	background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#F5F5F5));
+	background-image: -o-linear-gradient(90deg,rgb(239,239,239),rgb(245,245,245));
+	background: -moz-linear-gradient(top,  #EFEFEF,  #F5F5F5);
+	border-radius: 10px;
+    width:350px;
+    height:80px;
+    font: 14px  Arial, Helvetica, sans-serif; 
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-85px;
+    margin-left:-175px;
+}
+    
+.SpaceTop
+{
+    /*background-image:url(../images/titlebar_bg.gif);
+    background-repeat:repeat-x;*/
+    width:100%;
+    height:30px;
+}
+
+/*Menu  Accordion*/
+    
+/* .MenuBar dl {margin:0 auto; width:100%} */
+/* .MenuBar dt {   background: #D7D7D7 url(../images/barraTopo.jpg) repeat-x bottom; */
+/*     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5270a6', endColorstr='#34446b'); */
+/*     background: -webkit-gradient(linear, left top, left bottom, from(#5270a6), to(#34446b)); */
+/*     background: -moz-linear-gradient(top,  #5270a6,  #34446b); */
+/*     background-image: -o-linear-gradient(90deg,rgb(82,112,166),rgb(52,68,107)); */
+/*     border-bottom: 2px solid #fff; padding:5px */
+/* } */
+/* .MenuBar dt a {display:block; text-decoration:none; color:#fff;} */
+/* .MenuBar dd, ul {margin:0; padding:0} */
+/* .MenuBar ul li {background-color:#EFEFEF; font-size:10px; list-style:none} */
+/* .MenuBar ul li a {display:block; text-decoration:none; color:#069; padding:5px} */
+/* .MenuBar ul li a:hover {display:block; text-decoration:none; background-color:#aaa; color:#fff} */
+
+
+.ui-datatable table{
+	
+	
+	font-size:11px;
+}
+
